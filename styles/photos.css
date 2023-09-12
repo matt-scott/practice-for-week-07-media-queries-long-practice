@@ -24,3 +24,74 @@
 }
 
 /* Your code here */
+/* Two columns, image on left with description on right (like second)
+1500 px */
+@media screen and (min-width: 1500px) {
+    .boxed-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+    }
+    .photo-card a {
+        display: block;
+        text-align: left;
+    }
+    .photo-card h3 {
+        text-align: left;
+    }
+    .photo-card .content {
+        display: flex;
+        text-align: center;
+    }
+    .photo-card img {
+        width: auto;
+        height: auto;
+        margin: 0 10px 0 0;
+    }
+}
+
+/* Two cards side-by-side (like 2 columns), image above description (like first)
+1200 px */
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+    .boxed-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+    }
+}
+
+/* Single column, image to the left with description on the right, title
+and link left-aligned, image only at thumbnail size (not growing)
+900 px */
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+    .photo-card a {
+        display: block;
+        text-align: left;
+    }
+    .photo-card h3 {
+        text-align: left;
+    }
+    .photo-card .content {
+        display: flex;
+        text-align: center;
+    }
+    .photo-card img {
+        width: auto;
+        height: auto;
+        margin: 0 10px 0 0;
+    }
+}
+
+/* Single column, image above description (current implementation), all
+content centered, image filling width of box
+600 px */
+@media screen and (min-width: 600px) {
+    .photo-card {
+        background-color: #1d3e81;
+        color: #E8EFF0;
+        padding: 0.5rem 2rem 1.5rem 2rem;
+        border-radius: 2rem;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+}
